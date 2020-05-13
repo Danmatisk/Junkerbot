@@ -468,15 +468,50 @@ dispatcher.on('error', console.error);
 	}
 }
   
-if (message.content.startsWith(`${vcfix}urchin`)) {
+const vurchin = [`${vcfix}urchin`, `${vcfix}Urchin`];
+if( vurchin.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
-    const dispatcher = connection.playFile('urchin.mp3');
+    const dispatcher = connection.playFile('./audio/urchin.mp3');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
 }
+
+const vid48 = [`${vcfix}video48`, `${vcfix}Video48`, `${vcfix}Video 48`, `${vcfix}video 48`];
+if( vid48.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/video48.mp3');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const VDK = [`${vcfix}Donkey kong`, `${vcfix}donkey kong`, `${vcfix}donkey Kong`, `${vcfix}Donkey Kong`, `{vcfix}Dk`, `{vcfix}DK`, `{vcfix}dk`];
+if( VDK.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/DONKEY KONG.mp3');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const BL = [`${vcfix}black people`, `${vcfix}Black people`, `${vcfix}black People`, `${vcfix}Black People`];
+if( BL.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/black-people.mp3');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
   
 
 //if (message.content.startsWith(`${prefix}leave`)) {
