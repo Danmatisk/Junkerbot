@@ -522,6 +522,17 @@ if( frogge.some(word => message.content.startsWith(word)) ) {
 dispatcher.on('error', console.error);
 	}
 }
+  
+const fecal = [`${vcfix}fecal matter`, `${vcfix}Fecal matter`, `${vcfix}Fecal Matter`, `${vcfix}fecal Matter`];
+if( fecal.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/fecalmatter.mp3');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
 
 //if (message.content.startsWith(`${prefix}leave`)) {
   //member.message.voiceChannel.leave();
