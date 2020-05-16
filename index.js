@@ -506,13 +506,22 @@ if( BL.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
-    const dispatcher = connection.playFile('./audio/black-people.mp3');
+    const dispatcher = connection.playFile('./audio/hate-black.mp3');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
 }
   
-  
+const frogge = [`${vcfix}frogge`, `${vcfix}Frogge`];
+if( frogge.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/frogge.mp3');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
 
 //if (message.content.startsWith(`${prefix}leave`)) {
   //member.message.voiceChannel.leave();
@@ -585,3 +594,4 @@ dispatcher.on('error', console.error);
   
     });
 client.login(process.env.TOKEN);
+
