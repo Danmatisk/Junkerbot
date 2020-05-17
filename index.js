@@ -463,6 +463,7 @@ if (message.content.startsWith(`!play dead deer`)) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./sketch/sketchy.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -474,6 +475,7 @@ if( vurchin.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/urchin.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -485,6 +487,7 @@ if( vid48.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/video48.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -496,6 +499,7 @@ if( VDK.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/DONKEY KONG.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -507,6 +511,7 @@ if( BL.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/hate-black.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -518,6 +523,7 @@ if( frogge.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/frogge.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -529,9 +535,27 @@ if( fecal.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/fecalmatter.mp3');
+    message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
+}
+  
+const obamfart = [`${vcfix}obama farts`, `${vcfix}Obama farts`, `${vcfix}Obama Farts`, `${vcfix}fobama Farts`];
+if( obamfart.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/obamafart.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const leave = [`${vcfix}leave`, `${vcfix}Leave`];
+if( leave.some(word => message.content.startsWith(word)) ) {
+  voiceChannel.leave();
 }
 
 //if (message.content.startsWith(`${prefix}leave`)) {
