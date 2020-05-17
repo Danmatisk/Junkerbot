@@ -541,12 +541,36 @@ dispatcher.on('error', console.error);
 	}
 }
   
-const obamfart = [`${vcfix}obama farts`, `${vcfix}Obama farts`, `${vcfix}Obama Farts`, `${vcfix}fobama Farts`];
+const obamfart = [`${vcfix}obama farts`, `${vcfix}Obama farts`, `${vcfix}Obama Farts`, `${vcfix}obama Farts`];
 if( obamfart.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/obamafart.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const cornpoop = [`${vcfix}corn poop`, `${vcfix}Corn poop`, `${vcfix}Corn Poop`, `${vcfix}corn Poop`];
+if( cornpoop.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/Corn in my Poop.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const pee = [`${vcfix}pee`, `${vcfix}Pee`];
+if( pee.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/The Pee Song!.mp3');
     message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
