@@ -326,13 +326,13 @@ message.channel.send("https://cdn.discordapp.com/attachments/618589508597710848/
 }
   
 if (message.attachments.size > 0 || message.content.includes("https://cdn.discordapp.com/attachments/") || message.content.includes("https://tenor.com/view/")) {
+if (message.member.hasPermission("ADMINISTRATOR")) return;
 if (message.channel.id != 690016420406624296  ) return;
 if (message.member.roles.has("600484909324435490")) return;
 if (cooldown.has(message.channel.id)){
   message.delete();
 }
 if (!message.member.hasPermission("ADMINISTRATOR")) {
-  if(message.member.roles.has("600484909324435490")) return;
   cooldown.add(message.channel.id);
 }
 setTimeout(() => {
@@ -498,8 +498,10 @@ if( VDK.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
-    const dispatcher = connection.playFile('./audio/DONKEY KONG.mp3');
     message.react('👍');
+    const dispatcher = connection.playFile('./audio/DONKEY KONG.mp3').then(() => {
+    connection.disconnect();
+    })
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
 	}
@@ -534,7 +536,7 @@ if( fecal.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
-    const dispatcher = connection.playFile('./audio/fecalmatter.mp3');
+    const dispatcher = connection.playFile('./audio/Fecal Matter on My Toothbrush (1).mp3');
     message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
@@ -571,6 +573,18 @@ if( pee.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/The Pee Song!.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const under = [`${vcfix}undertale`, `${vcfix}Undertale`];
+if( under.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/umdertale.mp3');
     message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
