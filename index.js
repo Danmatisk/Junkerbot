@@ -326,6 +326,7 @@ message.channel.send("https://cdn.discordapp.com/attachments/618589508597710848/
 }
   
 if (message.attachments.size > 0 || message.content.includes("https://cdn.discordapp.com/attachments/") || message.content.includes("https://tenor.com/view/")) {
+if (message.member.roles.has("653071153723605037")) return;
 if (message.member.hasPermission("ADMINISTRATOR")) return;
 if (message.channel.id != 690016420406624296  ) return;
 if (message.member.roles.has("600484909324435490")) return;
@@ -573,6 +574,18 @@ if( pee.some(word => message.content.startsWith(word)) ) {
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
     const dispatcher = connection.playFile('./audio/The Pee Song!.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
+const stronger = [`${vcfix}Stronger than you`, `${vcfix}stronger than you`];
+if( stronger.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/stronger.mp3');
     message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
