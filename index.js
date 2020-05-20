@@ -241,6 +241,12 @@ if( donkey.some(word => message.content.includes(word)) ) {
 message.channel.send(kong);
 }
   
+          const donkey2 = ["DONKEY KONG"];
+if( donkey2.some(word => message.content.includes(word)) ) {
+ var kong2 = new Discord.Attachment('./Images/donke2.jpg')
+message.channel.send(kong2);
+}
+  
             const unFunny = ["unFunny", "Unfunny", "UnFunny"];
 if( unFunny.some(word => message.content.includes(word)) ) {
 message.channel.send("unfunny");
