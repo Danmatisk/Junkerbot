@@ -24,7 +24,7 @@ const prefix = "=";
 const vcfix = "vc=";
   
 client.on('ready', () => {
-  client.user.setActivity("ScroRPG");
+  client.user.setActivity("Activating Windows");
   console.log('I am ready!');
 });
 client.on('message', async message => {
@@ -180,16 +180,16 @@ if( dm.some(word => message.content.startsWith(word)) ) {
 { const replies = [Corn, Cube, Donut, Globe, Hedron, Line, Nuke, Pyramid, Redacted, Rubix, Tesseract, This, Monkey]
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
  }
-
+ 
             const help = [`${prefix}Help`, `${prefix}help`, `${prefix}List`, `${prefix}list`];
-if( help.some(word => message.content.includes(word)) ) {
+if( help.some(word => message.content.startsWith(word)) ) {
   const Help1 = new Discord.RichEmbed()
   .setTitle("Junker's Junk")
   .setColor(0xff5f67)
   .setFooter("Hi! I'm Nathan Drake. And if you're the adventurous-type like me, then get in on the Subway Taste For Adventure. GET A CHANCE TO WIN EPIC TRIPS AND EXCLUSIVE ACCESS TO UNCHARTED 3! Get your code on 30-oz. DRINKS today! Subway: where winners eat! Ow. \n Danmatisk Enterprises")
   .setImage("https://cdn.discordapp.com/attachments/613408923176927234/689290040676843563/JunkerDance.gif")
   .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
-  .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny", true)
+  .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny \nDonkey Kong", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
   .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny", true)
   .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite", true);
@@ -219,6 +219,9 @@ if( help.some(word => message.content.includes(word)) ) {
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
  }
   
+
+  
+
 const embed = [`${prefix}embed`];
   if( embed.some(word => message.content.includes(word)) ) {
 const exampleEmbed = new Discord.RichEmbed()
@@ -331,11 +334,11 @@ const avatar = [`${prefix}Avatar`, `${prefix}avatar`];
 //message.reply(message.author.avatarURL);
   //}
 
-            const mute = ["muted", "mute", "Muted", "Mute"];
-if( mute.some(word => message.content.includes(word)) ) {
-if (message.channel.id != 690017465639501954  ) return;
-message.channel.send("https://cdn.discordapp.com/attachments/618589508597710848/706965362255855656/Thanks_max.jpg")
-}
+ //           const mute = ["muted", "mute", "Muted", "Mute"];
+//if( mute.some(word => message.content.includes(word)) ) {
+//if (message.channel.id != 690017465639501954  ) return;
+//message.channel.send("https://cdn.discordapp.com/attachments/618589508597710848/706965362255855656/Thanks_max.jpg")
+//}
   
 if (message.attachments.size > 0 || message.content.includes("https://cdn.discordapp.com/attachments/") || message.content.includes("https://tenor.com/view/")) {
 if (message.member.roles.has("653071153723605037")) return;
@@ -616,11 +619,41 @@ dispatcher.on('error', console.error);
 	}
 }
   
+const rape = [`${vcfix}raping`, `${vcfix}Raping`];
+if( rape.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/raping.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
 const leave = [`${vcfix}leave`, `${vcfix}Leave`];
 if( leave.some(word => message.content.startsWith(word)) ) {
   voiceChannel.leave();
 }
+  
+            const vchelp = [`${vcfix}Help`, `${vcfix}help`, `${vcfix}List`, `${vcfix}list`];
+if( vchelp.some(word => message.content.startsWith(word)) ) {
+  const Helpvc = new Discord.RichEmbed()
+  .setTitle("Junker's Audible Junk")
+  .setColor(0x1dff00)
+  .setFooter("Whoa-oh-oh-oh-oh-oh-oh-oh-oh-oh Story of UNDERTALE I fell from the light Talk? Or should I fight? Monster genocide This my UNDERTALE I fell through a cave on Mt. Ebott I faced an evil talking flower in a pot Explains the plot, wants me dead, wants me to rot Toriel saves me, takes me to her home And hooks me up with a brand-new monster phone Leaves me alone, but I escape and meet some bones Should I be a pacifist? Or should I use my fists? I’m feeling evil, think I’ll kill them all I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue I fell from the light Talk? Or should I fight? Monster genocide This my UNDERTALE I’ll slaughter Undyne, I’ll waste who I choose With all this EXP there’s no way that I’ll lose Now watch me move, I won’t stop, I’m feelin' rude Asgore is shaking, he hears my approach I’ll slaughter Sans and squash his bro like a roach Chara’s my coach, all these monsters I will poach Screw being pacifist I think I’ll use my fists I’m feeling evil, think I’ll kill them all I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue Burnt pan, toy knife, use a stick to take your life Tough glove, ballet shoes, epic fight like front page news King Asgore wants to collect human souls Seven of them, is his ultimate goal Open the door, to humanity’s realm Start a new war, humans overwhelm I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue \n Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/attachments/690016206345994300/713649451649990666/emote.gif")
+  .addField("Music", "vc=video48 \nvc=fecal matter \nvc=obama farts \nvc=corn poop \nvc=pee \nvc=stronger than you \nvc=undertale \nvc=raping", true)
+  .addField("Not Music", "!play dead deer \nvc=urchin \nvc=donkey kong \nvc=frogge", true)
+  .addField("Donkey Kong", "vc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong");
 
+message.channel.send(Helpvc);
+ }
+
+
+
+  
+  
 //if (message.content.startsWith(`${prefix}leave`)) {
   //member.message.voiceChannel.leave();
 //}
