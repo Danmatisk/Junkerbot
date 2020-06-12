@@ -153,8 +153,20 @@ if( cringe.some(word => message.content.startsWith(word)) ) {
   
 const dm = [`${prefix}invite`, `${prefix}Invite`];
 if( dm.some(word => message.content.startsWith(word)) ) {
-  message.author.send("Here's my invite link to spread my junk \nhttps://discordapp.com/oauth2/authorize?client_id=613409750050144296&scope=bot&permissions=8")
+  message.author.send("Here's my invite link to spread my junk https://discordapp.com/oauth2/authorize?client_id=613409750050144296&scope=bot&permissions=8")
 }
+  
+const golira = [`${prefix}golira`, `${prefix}Golira`];
+if( golira.some(word => message.content.startsWith(word)) ) {
+if (!message.member.user.id == "372883539865370636") return;
+  message.channel.send("golira 🦍")
+}
+  
+ const undertale = [`${prefix}homestuck`, `${prefix}Homestuck`];
+ if( undertale.some(word => message.content.startsWith(word)) ) {
+  message.channel.send('<@!264890302873993217>');
+ }
+  
   
  const Joke = [`${prefix}Explain Joke`, `${prefix}Explain joke`, `${prefix}explain Joke`, `${prefix}explain joke`];
  if( Joke.some(word => message.content.startsWith(word)) ) {
@@ -474,6 +486,38 @@ const scan = new Discord.RichEmbed()
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
  }
   
+  if (message.content.startsWith(`${prefix}superior`)) {
+const akechi = new Discord.RichEmbed()
+  .setColor(0x00eeff)
+  .setDescription ("JunkerBot is superior to ``AkechiBot``")
+  .setFooter("Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/avatars/707411212434014281/6c9fb55316aef4e5352543cea913446b.png?size=2048")
+const mee6 = new Discord.RichEmbed()
+  .setColor(0x00eeff)
+  .setDescription ("JunkerBot is superior to ``MEE6``")
+  .setFooter("Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/avatars/159985870458322944/b50adff099924dd5e6b72d13f77eb9d7.png?size=2048")
+const notsobot = new Discord.RichEmbed()
+  .setColor(0x00eeff)
+  .setDescription ("JunkerBot is superior to ``NotSoBot``")
+  .setFooter("Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/avatars/439205512425504771/7c2306f9ce96ce9805584ef823f58648.png?size=2048")
+const rythm = new Discord.RichEmbed()
+  .setColor(0x00eeff)
+  .setDescription ("JunkerBot is superior to ``Rythm``")
+  .setFooter("Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/avatars/235088799074484224/16c197c4c3f0eb808f9bceb6e1075e71.png?size=2048")
+const jx = new Discord.RichEmbed()
+  .setColor(0x00eeff)
+  .setDescription ("JunkerBot is superior to ``junkerBot X``")
+  .setFooter("Danmatisk Enterprises")
+  .setImage("https://cdn.discordapp.com/avatars/678372076305776660/835c4c3569b6ccdbaa9325bc52b2730c.png?size=2048")
+ { const replies = [akechi, mee6, notsobot, rythm, jx]
+ message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
+ }
+  
+  
+  
 if (message.content.startsWith(`!play dead deer`)) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
@@ -631,6 +675,19 @@ dispatcher.on('error', console.error);
 	}
 }
   
+  
+const bounce = [`${vcfix}diarrhea`, `${vcfix}Diarrhea`];
+if( bounce.some(word => message.content.startsWith(word)) ) {
+// Create a dispatcher
+	if (message.member.voiceChannel) {
+		const connection = await message.member.voiceChannel.join();
+    const dispatcher = connection.playFile('./audio/direa.mp3');
+    message.react('👍');
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+	}
+}
+  
 const leave = [`${vcfix}leave`, `${vcfix}Leave`];
 if( leave.some(word => message.content.startsWith(word)) ) {
   voiceChannel.leave();
@@ -643,7 +700,7 @@ if( vchelp.some(word => message.content.startsWith(word)) ) {
   .setColor(0x1dff00)
   .setFooter("Whoa-oh-oh-oh-oh-oh-oh-oh-oh-oh Story of UNDERTALE I fell from the light Talk? Or should I fight? Monster genocide This my UNDERTALE I fell through a cave on Mt. Ebott I faced an evil talking flower in a pot Explains the plot, wants me dead, wants me to rot Toriel saves me, takes me to her home And hooks me up with a brand-new monster phone Leaves me alone, but I escape and meet some bones Should I be a pacifist? Or should I use my fists? I’m feeling evil, think I’ll kill them all I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue I fell from the light Talk? Or should I fight? Monster genocide This my UNDERTALE I’ll slaughter Undyne, I’ll waste who I choose With all this EXP there’s no way that I’ll lose Now watch me move, I won’t stop, I’m feelin' rude Asgore is shaking, he hears my approach I’ll slaughter Sans and squash his bro like a roach Chara’s my coach, all these monsters I will poach Screw being pacifist I think I’ll use my fists I’m feeling evil, think I’ll kill them all I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue Burnt pan, toy knife, use a stick to take your life Tough glove, ballet shoes, epic fight like front page news King Asgore wants to collect human souls Seven of them, is his ultimate goal Open the door, to humanity’s realm Start a new war, humans overwhelm I’m homicidal, and I’ve got a taste I want to wipe out the Monster race I’ve got no patience, got no resolve I will slaughter, screw the dialogue \n Danmatisk Enterprises")
   .setImage("https://cdn.discordapp.com/attachments/690016206345994300/713649451649990666/emote.gif")
-  .addField("Music", "vc=video48 \nvc=fecal matter \nvc=obama farts \nvc=corn poop \nvc=pee \nvc=stronger than you \nvc=undertale \nvc=raping", true)
+  .addField("Music", "vc=video48 \nvc=fecal matter \nvc=obama farts \nvc=corn poop \nvc=pee \nvc=stronger than you \nvc=undertale \nvc=raping \nvc=diarrhea", true)
   .addField("Not Music", "!play dead deer \nvc=urchin \nvc=donkey kong \nvc=frogge", true)
   .addField("Donkey Kong", "vc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong \nvc=donkey kong");
 
