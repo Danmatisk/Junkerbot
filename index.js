@@ -76,11 +76,6 @@ client.on('message', async message => {
       message.channel.send('<@!654898893078921218>');
   }
   
- const Waluigi = [`${prefix}Waluigi Time`, `${prefix}Waluigi time`, `${prefix}waluigi Time`, `${prefix}waluigi time`];
- if( Waluigi.some(word => message.content.startsWith(word)) ) {
-     const localFileAttachment = new Discord.Attachment('./Images/Waluigi.gif')
-     message.channel.send(localFileAttachment)
-     }
   
   const Creeper = [`${prefix}Creeper`, `${prefix}creeper`];
   if( Creeper.some(word => message.content.startsWith(word)) ) {
@@ -90,11 +85,6 @@ client.on('message', async message => {
  const Dance = [`${prefix}Junker Dance`, `${prefix}Junker dance`, `${prefix}junker Dance`, `${prefix}junker dance`];
  if( Dance.some(word => message.content.startsWith(word)) ) {
   const localFileAttachment = new Discord.Attachment('./Images/JunkerDance.gif')
-  message.channel.send(localFileAttachment)
- }
- const Moyai = [`${prefix}Moyai`, `${prefix}moyai`];
- if( Moyai.some(word => message.content.startsWith(word)) ) {
-  const localFileAttachment = new Discord.Attachment('./Images/Moyai.png')
   message.channel.send(localFileAttachment)
  }
  const Pewnig = [`${prefix}Pewnig`, `${prefix}pewnig`];
@@ -115,11 +105,6 @@ client.on('message', async message => {
  const Gnome = [`${prefix}Gnome`, `${prefix}gnome`];
  if( Gnome.some(word => message.content.startsWith(word)) ) {
   const localFileAttachment = new Discord.Attachment('./Images/Gnome.jpg')
-  message.channel.send(localFileAttachment)
- }
- const WOW = [`${prefix}Bruh`, `${prefix}bruh`];
- if( WOW.some(word => message.content.startsWith(word)) ) {
-  const localFileAttachment = new Discord.Attachment('./Images/WOW.png')
   message.channel.send(localFileAttachment)
  }
  const Ranch = [`${prefix}Ram Ranch`, `${prefix}Ram ranch`, `${prefix}ram Ranch`, `${prefix}ram ranch`];
@@ -206,10 +191,10 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .setColor(0xff5f67)
   .setFooter("Hi! I'm Nathan Drake. And if you're the adventurous-type like me, then get in on the Subway Taste For Adventure. GET A CHANCE TO WIN EPIC TRIPS AND EXCLUSIVE ACCESS TO UNCHARTED 3! Get your code on 30-oz. DRINKS today! Subway: where winners eat! Ow. \n Danmatisk Enterprises")
   .setImage("https://cdn.discordapp.com/attachments/613408923176927234/689290040676843563/JunkerDance.gif")
-  .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
+  .addField("Image/Video Commands", "=junker dance \n=pewnig \n=bownig \n=thicc luigi \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny \nDonkey Kong", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table \n=compliment", true)
   .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
   
   const Help2 = new Discord.RichEmbed()
@@ -217,10 +202,10 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .setColor(0xff5f67)
   .setFooter("YOU MOTHER FUCKER YOU ASKED MY BF TO HAVE A MATCHING PFP WITH YOU I SWEAR TO GOD IF YOU TRY ANYTHING I WILL MAKE YOU SUFFER I WILL FUCKING DESTROY YOU INSIDE AND OUT I FUCKING MEAN IT \n Danmatisk Enterprises")
   .setImage("https://cdn.discordapp.com/attachments/663769176426545182/689569810329501731/emote.gif")
-  .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
+  .addField("Image/Video Commands", "=junker dance \n=pewnig \n=bownig \n=thicc luigi \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table \n=compliment", true)
   .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
   
   const Help3 = new Discord.RichEmbed()
@@ -228,10 +213,10 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .setColor(0xff5f67)
   .setFooter("Yknow during the Las Vegas shooting Steven Paddick supposedly expend over 3 thousand rounds of ammunition over the course of 10 minutes from 27 AR-15s with bumstocks despite the fact that that would have required him to drop a gun after each 30 rounds was empty and videos from the survivors show that is was a nonstop stream of bullets with a firing rate much higher than a bumstock is capable ofproducing coming from multiple locations which appear to be M240-LMGs after the fbi took over the investigation his house somehow burnt down along with all the evidence and photos of his hotel room he shot from showed only about 50 spent shells years later we don't know his motivation and strangely there was no follow up on the biggest mass shooting is us history his brother had numerous pressinterviews where it claimed it made no sense and suspiciously the very next day he was arrested to possessing hundreds of terabytes of child porn supposedly he stored all that in a 20 year old computer which ran windows 95 at least according to the photos ta \n Danmatisk Enterprises")
   .setImage("https://cdn.discordapp.com/attachments/663769176426545182/689571215647703059/emote.gif")
-  .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
+  .addField("Image/Video Commands", "=junker dance \n=pewnig \n=bownig \n=thicc luigi \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table \n=compliment", true)
   .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
  { const replies = [Help1, Help2, Help3]
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
