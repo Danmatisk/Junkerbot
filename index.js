@@ -167,7 +167,13 @@ if (!message.member.user.id == "372883539865370636") return;
   message.channel.send('<@!264890302873993217>');
  }
   
+ const tablevid = [`${prefix}table`, `${prefix}Table`];
+ if( tablevid.some(word => message.content.startsWith(word)) ) {
+{ const replies = ["https://cdn.discordapp.com/attachments/690016420406624296/719272412717252618/tablewhip.mp4", "https://cdn.discordapp.com/attachments/690016420406624296/719269543427440701/noslam.mp4", "https://cdn.discordapp.com/attachments/690016420406624296/719265795955228806/table4.mp4", "https://cdn.discordapp.com/attachments/690016420406624296/719262366205870182/table2.mp4", "https://cdn.discordapp.com/attachments/690016420406624296/719261323485249616/table.mp4", "https://cdn.discordapp.com/attachments/690016420406624296/720862752947699783/video041_3.mp4"]
+ message.replytext = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replytext]); }
+ }
   
+
  const Joke = [`${prefix}Explain Joke`, `${prefix}Explain joke`, `${prefix}explain Joke`, `${prefix}explain joke`];
  if( Joke.some(word => message.content.startsWith(word)) ) {
 { const replies = ["Joke Explained: Funny", "Joke Explained: Motherfucking Jojo reference", "Joke Explained: Pee and/or poo is funny", "Joke Explained: Isreal", "Joke Explained: Murder is ethical and hot", "Joke Explained: Samd undertaker dum dum dum dum dum dum dum dum dum dum", "Joke Explained: Homosexuality is funny", "Joke Explained: Garfield lasogana", "Joke Explained: Penis in vagaegae", "Joke Explained: Sex.", "Joke Explained: Joke Explained", "Joke Explained: r/IHaveReddit", "joke explained: capitalize your fucking sentences", "Joke Explained: H", "Joke Explained: Do not sleep in the overworld", "Joke Explained: Link in the description", "Joke Explained: N-word", "Joke Explained: Gun violence is a fun activity", "Joke Explained: I'm not explaining that fuck off", "Joke Explained: You are the joke", "Joke explained: Funny clown music", "Joke explained: Global warming is vegan propaganda", "Joke explained: Salsa cracker vagina", "Joke Explained: Nice Repost!", "Joke Explained: I have erectile dysfunction :D", "Joke Explained: uwu I want to taste your spewmy wewmy", "Joke Explained: Ho ho ho ha ha, ho ho ho he ha. Hello there, old chum. I’m gnot an elf. I’m gnot a goblin. I’m a gnome. And you’ve been, gnomed!", "Joke Explained: Fuck Hazbin Hotel, all my homies hate Hazbin Hotel", "Joke Explained: Consume the cum chalice", "Joke Explained: Shut the fuck up PP", "Joke Explained: Poggers in the chat", "Joke Explained: Funny Fart Unfunny funny 2 i hate bosnia"]
@@ -192,7 +198,7 @@ if (!message.member.user.id == "372883539865370636") return;
 { const replies = [Corn, Cube, Donut, Globe, Hedron, Line, Nuke, Pyramid, Redacted, Rubix, Tesseract, This, Monkey]
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
  }
- 
+
             const help = [`${prefix}Help`, `${prefix}help`, `${prefix}List`, `${prefix}list`];
 if( help.some(word => message.content.startsWith(word)) ) {
   const Help1 = new Discord.RichEmbed()
@@ -203,8 +209,8 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny \nDonkey Kong", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny", true)
-  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite", true);
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
   
   const Help2 = new Discord.RichEmbed()
   .setTitle("Junker's Junk")
@@ -214,8 +220,8 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny", true)
-  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite", true);
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
   
   const Help3 = new Discord.RichEmbed()
   .setTitle("Junker's Junk")
@@ -225,8 +231,8 @@ if( help.some(word => message.content.startsWith(word)) ) {
   .addField("Image/Video Commands", "=junker dance \n=moyai \n=pewnig \n=bownig \n=thicc luigi \n=bruh \n=gnome \n=eraser \n=garf \n=yknow \n=subway \n=cringe")
   .addField("Prefixless Text Commands", "Funny \nFart \nfunny 2 \ni hate bosnia \nUnfunny", true)
   .addField("Text Commands", "=pog \n=creeper \n=ram ranch \n=urchin", true)
-  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny", true)
-  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite", true);
+  .addField("Randomized Commands", "=explain joke \n=obama \n=anmatisk \n=vinny \n=table", true)
+  .addField("Useful Shit", "=giverole <ROLE> <MEMBER> \n=avatar <MEMBER> \n=nickname <NICKNAME> \n=invite \n=activate jeff", true);
  { const replies = [Help1, Help2, Help3]
  message.replyimage = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replyimage]); }
  }
@@ -295,6 +301,13 @@ const vinny = [`${prefix}vinny`, `${prefix}Vinny`, `${prefix}Vinesauce`, `${pref
  message.replytext = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replytext]); }
  }
   
+const compliment = [`${prefix}compliment`, `${prefix}Compliment`];
+ if( compliment.some(word => message.content.startsWith(word)) ) {
+{ const replies = ["Hey are you NOT bEEp b00p#5033? cuz you're actually a decent human being.", "are you the sun? because holy heck are you, um, yes.", "you're not creative urchin 87 and thats good enough for me", "ur hot", "fuck you", "why are you black", "hey baby are you a homestuck fan? because you are karkalicious!", "are you a command block because you make my wither storm", "https://cdn.discordapp.com/attachments/690016420406624296/721529251911827536/800px-ManiaSPZ1.png", "hey girl are you a bottom? because you're going to hell.", "i want cum you", "im stuff", "damn girl you must be a forward aerial because i wanna hit that", "Let’s say, you’ve been a bad girl. Let’s say, hypothetically, you’ve been a naughty girl even. Ok, and if you were a naughty girl you would also be my dirty little slut right? then hypothetically speaking you would be my little cumslut.", "Are you Jeff because you activate me", "https://cdn.discordapp.com/attachments/690016420406624296/721532407760814090/i-am-foxy.png", "=explain joke", "You. Get in. https://cdn.discordapp.com/attachments/690016420406624296/721533705742450708/Mason-Jar-Transparent.png", "real"]
+ message.replytext = Math.floor((Math.random() * replies.length) + 0); message.channel.send(replies[message.replytext]); }
+ }
+
+  
 const pog = [`${prefix}pog`, `${prefix}Pog`];
  if( pog.some(word => message.content.startsWith(word)) ) {
 { const replies = ["pog", "poggers", "pogchamp", "poggerchamp", "pogchiemp", "pogré"]
@@ -339,7 +352,49 @@ const avatar = [`${prefix}Avatar`, `${prefix}avatar`];
     }
   }
   
+//const jeff = [`${prefix}activate jeff`, `${prefix}Activate Jeff`, `${prefix}Activate jeff`, `${prefix}activate Jeff`];
+  //if( jeff.some(word => message.content.startsWith(word)) ) {
+  //message.channel.send("Activating Jeff...");
+  //setTimeout(function(){
+      //message.channel.send("Jeff has been activated.")
+ //}, 60000);
+  //}
   
+const jeff = [`${prefix}activate jeff`, `${prefix}Activate Jeff`, `${prefix}Activate jeff`, `${prefix}activate Jeff`];
+  if( jeff.some(word => message.content.startsWith(word)) ) {
+    message.channel.send("Activating Jeff...");
+    var response = Math.floor(Math.random()*6);
+         if(response == 0){
+      setTimeout(function(){
+          message.channel.send("Jeff has been activated.")
+      }, 60000);
+         }
+         if(response == 1){
+      setTimeout(function(){
+          message.channel.send("Jeff has been activated.")
+      }, 30000);
+         }
+         if(response == 2){
+      setTimeout(function(){
+          message.channel.send("Jeff has been activated.")
+      }, 10000);
+         }
+         if(response == 3){
+      setTimeout(function(){
+          message.channel.send("Jeff has been activated.")
+      }, 10);
+         }
+         if(response == 4){
+      setTimeout(function(){
+          message.channel.send("Jeff has been activated.")
+      }, 120000);
+         }
+         if(response == 5){
+      setTimeout(function(){
+          message.channel.send("Jeff activation has failed.")
+      }, 60000);
+         }
+  }
   
   //const avatar = [`${prefix}Avatar`, `${prefix}avatar`];
   //if( avatar.some(word => message.content.startsWith(word)) ) {
@@ -782,4 +837,3 @@ message.channel.send(Helpvc);
   
     });
 client.login(process.env.TOKEN);
-
