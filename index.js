@@ -730,13 +730,12 @@ dispatcher.on('error', console.error);
 	}
 }
   
-  
-const bounce = [`${vcfix}diarrhea`, `${vcfix}Diarrhea`];
-if( bounce.some(word => message.content.startsWith(word)) ) {
+const what = [`${vcfix}what`, `${vcfix}What`, `${vcfix}How`, `${vcfix}how`];
+if( what.some(word => message.content.startsWith(word)) ) {
 // Create a dispatcher
 	if (message.member.voiceChannel) {
 		const connection = await message.member.voiceChannel.join();
-    const dispatcher = connection.playFile('./audio/direa.mp3');
+    const dispatcher = connection.playFile('./audio/How.mp3');
     message.react('👍');
 // Always remember to handle errors appropriately!
 dispatcher.on('error', console.error);
